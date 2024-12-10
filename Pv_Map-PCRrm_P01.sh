@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# Mapping with HISAT2 and PCR duplicates removal with Picard
+
 # Paths and settings
 HISAT2_INDEX="/local/projects-t3/SerreDLab-3/fdumetz/Pv_ethiopia/P01_hisat_index/PvivaxP01_hisat_index"  # Replace with your HISAT2 index base name
 PARENT_DIR="/local/projects-t4/aberdeen2ro/SerreDLab-4/raw_reads/2024-12-10_Eugenia_Lo"  # Parent directory containing subfolders with FASTQ files
