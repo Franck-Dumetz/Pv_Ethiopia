@@ -10,12 +10,12 @@ Then use [Map_5sp_SlurmArray.sh](https://github.com/Franck-Dumetz/Pv_Ethiopia/bl
 We need to count how manyreads maps to each portion go the different genomes
 Firstly, use [count_specie.py](https://github.com/Franck-Dumetz/Pv_Ethiopia/blob/main/Co-infection_multiplePlasmo/count_species.py) to read through all the bam files and export csv file for each samples.
 Secondly, extract all headers from initial fasta file to have a reference => what header for what species
-'''
+```
 grep '>' Pk_GCF_000006355_no_MIT.fasta | awk '{print $1}' | sed 's/^>//' > Pk_names.txt  
 grep '>' PvivaxP01_genome_no_MIT.fasta | awk '{print $1}' | sed 's/^>//' > Pv_names.txt
 grep '>' PmUG01_genome_no_MIT.fasta | awk '{print $1}' | sed 's/^>//' > Pm_names.txt
 grep '>' Pfalciparum3D7_genome_no_MIT.fasta | awk '{print $1}' | sed 's/^>//' > Pf_names.txt
 grep '>' PocGH01_genome_no_MIT.fasta | awk '{print $1}' | sed 's/^>//' > Po_names.txt
-'''
+```
 Finally, use [Species_RC_summary.py](https://github.com/Franck-Dumetz/Pv_Ethiopia/blob/main/Co-infection_multiplePlasmo/Species_RC_summary.py) to generate a summary table with all the samples with the number of reads per species and the percentage that value represents in the total sample. <br />
 
