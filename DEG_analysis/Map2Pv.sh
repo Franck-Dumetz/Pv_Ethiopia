@@ -4,7 +4,7 @@
 
 # Paths and settings
 HISAT2_INDEX="/local/projects-t3/SerreDLab-3/fdumetz/Pv_ethiopia/P01_hisat_index/PvivaxP01_hisat_index"  # Replace with your HISAT2 index base name
-PARENT_DIR="/local/projects-t4/aberdeen2ro/SerreDLab-4/raw_reads/2024-12-10_Eugenia_Lo"  # Parent directory containing subfolders with FASTQ files
+PARENT_DIR="path/to/all_seq_folders"  # Parent directory containing subfolders with FASTQ files
 ALIGN_OUTPUT_DIR="bam_Pv_aligned"  # Directory for aligned BAM files
 DEDUP_OUTPUT_DIR="bam_Pv_dedup"  # Directory for duplicate-removed BAM files
 METRICS_DIR="bam_Pv_dedup/metrics"  # Directory for Picard metrics
@@ -48,7 +48,7 @@ for SUBFOLDER in "$PARENT_DIR"/*; do
         echo "Mapping completed for $BASENAME. Converting SAM to BAM..."
 
         # Convert SAM to BAM and sort
-        samtools view -bS "$ALIGN_OUTPUT_DIR/${BASENAME}_Pv.sam" > "$ALIGN_OUTPUT_DIR/${BASENAME}_Pv.bam"
+        samtools view -bSF 2308 "$ALIGN_OUTPUT_DIR/${BASENAME}_Pv.sam" > "$ALIGN_OUTPUT_DIR/${BASENAME}_Pv.bam"
         samtools sort "$ALIGN_OUTPUT_DIR/${BASENAME}_Pv.bam" -o "$ALIGN_OUTPUT_DIR/${BASENAME}_Pv_sorted.bam"
         samtools index "$ALIGN_OUTPUT_DIR/${BASENAME}_Pv_sorted.bam"
 
