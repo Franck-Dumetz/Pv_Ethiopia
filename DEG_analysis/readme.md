@@ -17,3 +17,7 @@ for many samples, use a slurm array and use [Hisat_summary_table.py](https://git
 [FeatureCount.sh](https://github.com/Franck-Dumetz/Pv_Ethiopia/blob/main/DEG_analysis/FeatureCount.sh) with generate a count table to use in R for the DEG analysis
 
 We used cibersortX and used gene deconvolution to extrapolate the stage composition of each sample as in Tebben et al mSystem 2022(PMID: 35862820 PMCID: PMC9426464 DOI: 10.1128/msystems.00258-22).
+Cybersort run: 
+- batch correction mode: B-mode
+- Run mode: relative
+- 
