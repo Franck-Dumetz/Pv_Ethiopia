@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # Mapping with HISAT2 and PCR duplicates removal with Picard
+# the PCR duplicate removal with Picard requires a lot of memory. think of using slurm with a lot of memory
 
 # Paths and settings
 HISAT2_INDEX="/local/projects-t3/SerreDLab-3/fdumetz/Pv_ethiopia/P01_hisat_index/PvivaxP01_hisat_index"  # Replace with your HISAT2 index base name
