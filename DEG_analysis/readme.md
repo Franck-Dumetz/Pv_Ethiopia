@@ -1,4 +1,4 @@
-#Differential gene expression
+##Differential gene expression
 
 Software requirements:
 -  hisat2-2.2.1
