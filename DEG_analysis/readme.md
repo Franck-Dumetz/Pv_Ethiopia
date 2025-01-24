@@ -1,4 +1,4 @@
-## Differential gene expression
+## Differential gene expression analysis
 
 Software requirements:
 -  hisat2-2.2.1
